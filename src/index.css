@@ -2,21 +2,36 @@ body {
 	margin: 0;
 	font-family: "Nunito", "Arial", "Helvetica", sans-serif;
 }
+
 h1 {
+	font-family: 'Google Sans';
+    font-weight: 500;
+    font-size: 96px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: #111F23;
+}
+
+.red {
+    color: #FF6562;
+    font-weight: 500;
+}
+
+.wrapper {
 	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	align-content: center;
+	justify-content: center;
+}
+
+.card {
+	width: 300px;
+	height: 300px;
+	border-radius: 30px;
 	display: flex;
-	flex-direction: column;
+	background-color: #FF6562;
 	justify-content: center;
 	align-items: center;
-	gap: 20px;
-	color: #61dafb;
-}
-h1 img {
-	height: 50px;
-	animation: rotate 3s linear infinite;
-}
-@keyframes rotate {
-	100% {
-		transform: rotate(360deg);
-	}
+	font-size: 56px;
 }
