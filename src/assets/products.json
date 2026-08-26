@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "_id": "622bf3531122a27a858163f5",
+    "name": "Силиконовый коврик под миску, размер М",
+    "price": 2550,
+    "discount": 15,
+    "weight": 320,
+    "size": "50×30",
+    "color": "Сливочный",
+    "description": "Силиконовый коврик под миску DOG CAT BOWL MAT изготовлен из безопасного, нетоксичного силикона. Предотвращает разливание воды, крошки и беспорядок на полу. Коврик устойчив к влаге и не скользит. Подходит для собак и кошек.",
+    "value": "Предотвращает разливание воды, крошки и беспорядок на полу. Прост в уходе: при загрязнениях протереть тряпочкой или мыльной водой. Износостойкий материал. Внешний вид ковриков не портит, а дополняет ваш интерьер.",
+    "isFavorite": false,
+    "isCart": false,
+    "available": true,
+    "stock": 10,
+    "picture": "https://static.tildacdn.com/tild6336-6532-4936-b130-383636313333/1_.jpg",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": 2,
+    "_id": "622bf3531122a27a858163f6",
+    "name": "Куриные желудочки для собак",
+    "price": 450,
+    "discount": 10,
+    "weight": "100 г",
+    "description": "Описание demo",
+    "isFavorite": false,
+    "isCart": false,
+    "available": true,
+    "stock": 10,
+    "picture": "https://react-learning.ru/image-compressed/2.jpg",
+    "tags": []
+  },
+  {
+    "id": 3,
+    "_id": "622bf3531122a27a858163f7",
+    "name": "Крупная говяжья сушено-вяленая жилка",
+    "price": 360,
+    "discount": 0,
+    "weight": "100 г",
+    "description": "Описание demo",
+    "isFavorite": false,
+    "isCart": false,
+    "available": true,
+    "stock": 10,
+    "picture": "https://react-learning.ru/image-compressed/3.jpg",
+    "tags": []
+  },
+  {
+    "id": 1,
+    "_id": "622bf3531122a27a858163f5",
+    "name": "Желудки утиные сушено-вяленые",
+    "price": 550,
+    "discount": 15,
+    "weight": "100 г",
+    "description": "Описание demo",
+    "isFavorite": false,
+    "isCart": false,
+    "available": true,
+    "stock": 10,
+    "picture": "https://react-learning.ru/image-compressed/1.jpg",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": 1,
+    "_id": "622bf3531122a27a858163f5",
+    "name": "Желудки утиные сушено-вяленые",
+    "price": 550,
+    "discount": 15,
+    "weight": "100 г",
+    "description": "Описание demo",
+    "isFavorite": false,
+    "isCart": false,
+    "available": true,
+    "stock": 10,
+    "picture": "https://react-learning.ru/image-compressed/1.jpg",
+    "tags": [
+      "new"
+    ]
+  }
+]

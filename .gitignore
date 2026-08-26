@@ -1,3 +1,5 @@
 /node_modules
 /.idea
 .DS_Store
+# Локальная "БД" пользователей, создаётся server.js при запуске
+/users.json

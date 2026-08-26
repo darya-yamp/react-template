@@ -1,0 +1,52 @@
+header {
+    background-color: white;
+    padding: 35px calc(50% - 600px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1060px) {
+		header {
+            padding-left: 30px;
+            padding-right: 30px;
+		}
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    font-family: 'Google Sans';
+}
+
+input {
+    width: 350px;
+    height: 35px;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+    outline: none;
+    padding: 0px 6px;
+    font-size: 15px;
+}
+
+.logo {
+    font-family: 'Google Sans';
+    font-weight: 800;
+    font-size: 28px;
+}
+
+.grey-icon {
+    width: 26px;
+    height: 26px;
+    fill: #EBE8E6;
+}
+
+.accent-icon {
+    width: 45px;
+    height: 45px;
+}

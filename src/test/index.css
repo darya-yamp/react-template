@@ -21,8 +21,8 @@ h1 {
 	height: 100vh;
 	display: grid;
 	grid-template-columns: repeat(2, auto);
-	align-content: center;
 	justify-content: center;
+	align-content: center;
 }
 
 .card {
@@ -34,4 +34,21 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	font-size: 56px;
+	flex-direction: column;
+	position: relative;
+}
+
+.card h6 {
+	margin: 0;
+	font-size: 35px;
+	font-weight: 500;
+	color: #fff;
+	font-family: 'Google Sans';
+}
+
+.card .like {
+	position: absolute;
+	font-size: 40px;
+	top: 25px;
+	right: 25px;
 }

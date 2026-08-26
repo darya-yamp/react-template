@@ -1,0 +1,42 @@
+.card {
+    background-color: #FFFFFF;
+    border: none;
+    padding: 25px;
+    display: flex;
+    flex-direction: column; /* Направление сверху вниз */
+    gap: 10px;
+}
+
+.card__item-image {
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.card__item-price {
+    font-family: 'Google Sans';
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+}
+
+.card__item-text {
+    font-family: 'Google Sans';
+    font-size: 16px;
+}
+
+.button {
+    margin-top: 10px;
+    width: max-content;
+    border: 3px solid black;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-weight: 600;
+    font-family: 'Google Sans';
+    font-size: 16px;
+    color: black;
+    background-color: white;
+}
