@@ -6,6 +6,7 @@ import Footer from './components/Footer/footer-index';
 /* Аналогичен ReactDOM.render() - здесь описаны данные. */
 
 const App = () => {
+    const [data, setData] = useState([]);
     const [goods, setGoods] = useState([]);
     const [token, setToken] = useState(localStorage.getItem('shopUser'));
 
@@ -18,14 +19,15 @@ const App = () => {
             }
         })
             .then(response => response.json())
-            .then(data => setGoods(data));
+            .then(data => {
+                setGoods(data);
+                setData(data);
+            });
     }, []);
-
-    console.log(token);
 
     return <>
             <div className='wrapper'>
-                    <Header products={goods} update={setGoods}/>
+                    <Header products={data} update={setGoods}/>
                     <Catalog goods={goods}/>
                     <Footer/>
             </div>
