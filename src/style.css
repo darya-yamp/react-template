@@ -17,7 +17,7 @@ body {
 	margin: auto;
 	padding: 30px 0; /* Только сверху и снизу */
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 30px;
 }
 

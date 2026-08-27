@@ -8,10 +8,11 @@
 }
 
 .card__item-image {
-    height: 100px;
+    height: 250px;
+    width: 350px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     border-radius: 15px;
     margin-bottom: 10px;
 }

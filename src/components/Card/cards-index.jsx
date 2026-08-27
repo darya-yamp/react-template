@@ -8,7 +8,7 @@ const Card = ({image, text, price}) => { // image, text, price - аргумен�
     };
     return (
         <div className='card'>
-            <div className='card__item-image'></div>
+            <div className='card__item-image' style={image_style}></div>
             <div className='card__item-price'>{price} ₽</div>
             <div className='card__item-text'>{text}</div>
             <button className='button'>В корзину</button>

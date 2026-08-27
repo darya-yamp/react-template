@@ -2,8 +2,8 @@
   {
     "id": 1,
     "_id": "622bf3531122a27a858163f5",
-    "name": "Силиконовый коврик под миску, размер М",
-    "price": 2550,
+    "name": "Пакеты для выгула собак SAVVE DOG BAGS MINI компостируемые, биоразлагаемые",
+    "price": 850,
     "discount": 15,
     "weight": 320,
     "size": "50×30",
@@ -14,7 +14,7 @@
     "isCart": false,
     "available": true,
     "stock": 10,
-    "picture": "https://static.tildacdn.com/tild6336-6532-4936-b130-383636313333/1_.jpg",
+    "picture": "https://cdn.insales-shop.ru/r/t7KXLboHq9c/rs:fit:1000:0:1/q:100/plain/images/products/1/3073/2594278401/IMG_8812.jpg@webp",
     "tags": [
       "new"
     ]
@@ -22,8 +22,8 @@
   {
     "id": 2,
     "_id": "622bf3531122a27a858163f6",
-    "name": "Куриные желудочки для собак",
-    "price": 450,
+    "name": "Салфетки для собак SAVVE DOG WIPES MINI для ухода за шерстью и лапами",
+    "price": 530,
     "discount": 10,
     "weight": "100 г",
     "description": "Описание demo",
@@ -31,14 +31,31 @@
     "isCart": false,
     "available": true,
     "stock": 10,
-    "picture": "https://react-learning.ru/image-compressed/2.jpg",
+    "picture": "https://static.tildacdn.com/tild6635-6164-4364-a666-663031396334/IMG_5587.JPG",
     "tags": []
   },
   {
     "id": 3,
-    "_id": "622bf3531122a27a858163f7",
-    "name": "Крупная говяжья сушено-вяленая жилка",
-    "price": 360,
+    "_id": "622bf3531122a29a858163f9",
+    "name": "Пакеты для выгула собак SAVVE DOG BAGS MAXI компостируемые, биоразлагаемые",
+    "price": 930,
+    "discount": 15,
+    "weight": "100 г",
+    "description": "Описание demo",
+    "isFavorite": false,
+    "isCart": false,
+    "available": true,
+    "stock": 10,
+    "picture": "https://cdn.insales-shop.ru/r/Oq1NydxiJO0/rs:fit:1000:0:1/q:100/plain/images/products/1/5633/2594231809/IMG_8909.jpg@webp",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": 4,
+    "_id": "622bf3531122a2a858163f7",
+    "name": "Пеленки для собак SAVVE Dog Pads, 5-ти слойные, бамбуковый уголь, 60х45",
+    "price": 770,
     "discount": 0,
     "weight": "100 г",
     "description": "Описание demo",
@@ -46,14 +63,14 @@
     "isCart": false,
     "available": true,
     "stock": 10,
-    "picture": "https://react-learning.ru/image-compressed/3.jpg",
+    "picture": "https://static.tildacdn.com/tild3338-3330-4933-a665-363038316634/IMG_5759.JPG",
     "tags": []
   },
   {
-    "id": 1,
+    "id": 5,
     "_id": "622bf3531122a27a858163f5",
-    "name": "Желудки утиные сушено-вяленые",
-    "price": 550,
+    "name": "Салфетки SAVVE DOG WIPES для чистки зубов собак и кошек",
+    "price": 408,
     "discount": 15,
     "weight": "100 г",
     "description": "Описание demo",
@@ -61,15 +78,15 @@
     "isCart": false,
     "available": true,
     "stock": 10,
-    "picture": "https://react-learning.ru/image-compressed/1.jpg",
+    "picture": "https://static.tildacdn.com/tild6562-6638-4561-a566-643038383530/IMG_7594.JPG",
     "tags": [
       "new"
     ]
   },
   {
-    "id": 1,
-    "_id": "622bf3531122a27a858163f5",
-    "name": "Желудки утиные сушено-вяленые",
+    "id": 6,
+    "_id": "622bf3531122a28a858163f8",
+    "name": "Салфетки для собак SAVVE DOG WIPES MINI для ухода за шерстью и лапами",
     "price": 550,
     "discount": 15,
     "weight": "100 г",
@@ -78,7 +95,7 @@
     "isCart": false,
     "available": true,
     "stock": 10,
-    "picture": "https://react-learning.ru/image-compressed/1.jpg",
+    "picture": "https://static.tildacdn.com/tild3962-3331-4566-b333-313666316437/IMG_8969.JPG",
     "tags": [
       "new"
     ]
