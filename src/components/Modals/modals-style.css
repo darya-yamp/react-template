@@ -1,0 +1,94 @@
+.popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0004;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup-wrapper.active {
+    display: flex;
+}
+
+.popup {
+    width: 600px;
+    background-color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 120px;
+    padding-right: 120px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.popup-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 26px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.button-signin {
+    margin-top: 10px;
+    width: max-content;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: 600;
+    font-family: 'Google Sans';
+    font-size: 16px;
+    color: white;
+    background-color: black;
+}
+
+.button-signup {
+    margin-top: 10px;
+    width: max-content;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: 600;
+    font-family: 'Google Sans';
+    font-size: 16px;
+    color: black;
+    background-color: white;
+}
+
+.form-controls {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.form-controls:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: deeppink;
+}
+
+h3 {
+    margin-bottom: 15px;
+}

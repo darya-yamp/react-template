@@ -15,7 +15,8 @@ body {
 .cards-container {
 	max-width: 1200px;
 	margin: auto;
-	padding: 30px 0; /* Только сверху и снизу */
+	padding-top: 10px;
+	padding-bottom: 50px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 30px;

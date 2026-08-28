@@ -34,8 +34,8 @@ export default ({products, update}) => {
                     <a href='' className='header-buttons'>Корзина</a>
                 </nav>
             </header>
-            <div>
-                {text ? `По запросу ${text} найдено ${count} товаров` : 'Поиск...'}
+            <div className='navigation-text'>
+                {text ? `По запросу ${text} найдено ${count} товаров` : 'Каталог товаров'}
             </div>
         </>
 }

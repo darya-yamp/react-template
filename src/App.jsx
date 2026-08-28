@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Catalog from './pages/Catalog';
 import Header from './components/Header/header-index';
 import Footer from './components/Footer/footer-index';
+import Modal from './components/Modals/modals-index';
 
 /* Аналогичен ReactDOM.render() - здесь описаны данные. */
 
@@ -31,6 +32,7 @@ const App = () => {
                     <Catalog goods={goods}/>
                     <Footer/>
             </div>
+            <Modal/>
     </>
 }
 

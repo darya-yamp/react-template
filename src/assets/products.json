@@ -2,7 +2,7 @@
   {
     "id": 1,
     "_id": "622bf3531122a27a858163f5",
-    "name": "Пакеты для выгула собак SAVVE DOG BAGS MINI компостируемые, биоразлагаемые",
+    "name": "Пакеты для выгула собак био SAVVE DOG BAGS MINI компостируемые, 60 шт.",
     "price": 850,
     "discount": 15,
     "weight": 320,
@@ -22,7 +22,7 @@
   {
     "id": 2,
     "_id": "622bf3531122a27a858163f6",
-    "name": "Салфетки для собак SAVVE DOG WIPES MINI для ухода за шерстью и лапами",
+    "name": "Салфетки для собак и кошек SAVVE DOG WIPES, для очищения глаз и ушей, 150 шт.",
     "price": 530,
     "discount": 10,
     "weight": "100 г",
@@ -37,7 +37,7 @@
   {
     "id": 3,
     "_id": "622bf3531122a29a858163f9",
-    "name": "Пакеты для выгула собак SAVVE DOG BAGS MAXI компостируемые, биоразлагаемые",
+    "name": "Пакеты для выгула собак био SAVVE DOG BAGS MAXI компостируемые, 135 шт.",
     "price": 930,
     "discount": 15,
     "weight": "100 г",
@@ -54,7 +54,7 @@
   {
     "id": 4,
     "_id": "622bf3531122a2a858163f7",
-    "name": "Пеленки для собак SAVVE Dog Pads, 5-ти слойные, бамбуковый уголь, 60х45",
+    "name": "Шампунь для собак SAVVE DOG SHAMPOO гипоаллергенный, для всех типов, 300 мл.",
     "price": 770,
     "discount": 0,
     "weight": "100 г",
@@ -69,7 +69,7 @@
   {
     "id": 5,
     "_id": "622bf3531122a27a858163f5",
-    "name": "Салфетки SAVVE DOG WIPES для чистки зубов собак и кошек",
+    "name": "Салфетки SAVVE DOG WIPES для чистки зубов собак и кошек, 150 шт.",
     "price": 408,
     "discount": 15,
     "weight": "100 г",
@@ -86,7 +86,7 @@
   {
     "id": 6,
     "_id": "622bf3531122a28a858163f8",
-    "name": "Салфетки для собак SAVVE DOG WIPES MINI для ухода за шерстью и лапами",
+    "name": "Салфетки для собак SAVVE DOG WIPES MINI для шерсти и лап, 3 х 15 шт.",
     "price": 550,
     "discount": 15,
     "weight": "100 г",
@@ -96,6 +96,23 @@
     "available": true,
     "stock": 10,
     "picture": "https://static.tildacdn.com/tild3962-3331-4566-b333-313666316437/IMG_8969.JPG",
+    "tags": [
+      "new"
+    ]
+  },
+  {
+    "id": 7,
+    "_id": "622bf3531122a28a858163f9",
+    "name": "Игрушка для собак ROY Zee.Dog, монстр",
+    "price": 1530,
+    "discount": 15,
+    "weight": "100 г",
+    "description": "Описание demo",
+    "isFavorite": false,
+    "isCart": false,
+    "available": true,
+    "stock": 10,
+    "picture": "https://cdn.insales-shop.ru/r/pi4gdRQhyzc/rs:fit:1000:0:1/q:100/plain/images/products/1/3986/405106578/zeedog-dog-toy-roy_main-2.jpg@webp",
     "tags": [
       "new"
     ]
