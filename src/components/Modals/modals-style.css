@@ -33,6 +33,7 @@
     right: 20px;
     top: 20px;
     font-size: 26px;
+    cursor: pointer;
 }
 
 form {
@@ -91,4 +92,8 @@ form {
 
 h3 {
     margin-bottom: 15px;
+}
+
+.label {
+    margin-top: 10px;
 }

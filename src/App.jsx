@@ -10,6 +10,7 @@ const App = () => {
     const [data, setData] = useState([]);
     const [goods, setGoods] = useState([]);
     const [token, setToken] = useState(localStorage.getItem('shopUser'));
+    const [popupActive, changePopupActive] = useState(true);
 
     // Отображение каталога при авторизации:
     useEffect(() =>{
@@ -32,7 +33,7 @@ const App = () => {
                     <Catalog goods={goods}/>
                     <Footer/>
             </div>
-            <Modal/>
+            <Modal isActive={popupActive} changeActive={changePopupActive}/>
     </>
 }
 

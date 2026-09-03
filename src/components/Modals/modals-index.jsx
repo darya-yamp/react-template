@@ -4,10 +4,10 @@ import {X, XCircleFill, EyeSlash} from 'react-bootstrap-icons';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './modals-style.css';
 
-export default () => {
-    return <div className='popup-wrapper'>
+export default ({isActive, changeActive}) => {
+    return <div className={isActive ? 'popup-wrapper active' : 'popup-wrapper'}>
         <div className='popup'>
-            <X className='popup-close'/>
+            <X className='popup-close' onClick={e => {changeActive(false)}}/>
             <Form>
                 <h3 className='form-headline'>Войти в личный кабинет</h3>
                 <Form.Group>
@@ -15,7 +15,7 @@ export default () => {
                     <Form.Control className='form-controls' type='email' placeholder=''></Form.Control>
                 </Form.Group>
                 <Form.Group>
-                    <Form.Label>Пароль:</Form.Label>
+                    <Form.Label className='label'>Пароль:</Form.Label>
                     <Form.Control className='form-controls' type='password'></Form.Control> 
                 </Form.Group>
                 <div className='button-wrapper'>
