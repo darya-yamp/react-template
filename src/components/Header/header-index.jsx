@@ -6,7 +6,7 @@ import {ReactComponent as UserIcon} from '../Header/images/user-solid-full.svg';
 import {ReactComponent as CartIcon} from '../Header/images/bag-shopping-solid-full.svg';
 
 // Компонент.
-export default ({products, update}) => {
+export default ({products, update, openPopup}) => {
 		const [text, changeText] = useState(''); // Первоначальное значение состояния.
         const [count, setCount] = useState(0); // Хук для обновления счетчика кол-ва найденных товаров.
         // Обработчик события - состояние. Обязательно имеют атрибут value и onChange. Строятся на каждый тег input/textArea/select/checkbox. 
@@ -29,7 +29,7 @@ export default ({products, update}) => {
                 <input type='search' name='search' value={text} onChange={handler}/>
                 {/* value связывает значение переменной text с вводом пользователя. */}
                 <nav className='navigation'>
-                    <a href='' className='header-buttons'>Личный кабинет</a>
+                    <a href='' className='header-buttons' onClick={e => {e.preventDefault(); openPopup(true)}}>Личный кабинет</a>
                     <a href='' className='header-buttons'>Избранное</a>
                     <a href='' className='header-buttons'>Корзина</a>
                 </nav>

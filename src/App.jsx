@@ -10,7 +10,7 @@ const App = () => {
     const [data, setData] = useState([]);
     const [goods, setGoods] = useState([]);
     const [token, setToken] = useState(localStorage.getItem('shopUser'));
-    const [popupActive, changePopupActive] = useState(true);
+    const [popupActive, changePopupActive] = useState(false);
 
     // Отображение каталога при авторизации:
     useEffect(() =>{
@@ -29,7 +29,7 @@ const App = () => {
 
     return <>
             <div className='wrapper'>
-                    <Header products={data} update={setGoods}/>
+                    <Header products={data} update={setGoods} openPopup={changePopupActive}/>
                     <Catalog goods={goods}/>
                     <Footer/>
             </div>
