@@ -3,6 +3,7 @@ import Catalog from './pages/Catalog';
 import Header from './components/Header/header-index';
 import Footer from './components/Footer/footer-index';
 import Modal from './components/Modals/modals-index';
+import Api from './api.js';
 
 /* Аналогичен ReactDOM.render() - здесь описаны данные. */
 
@@ -11,8 +12,15 @@ const App = () => {
     const [goods, setGoods] = useState([]);
     const [token, setToken] = useState(localStorage.getItem('shopUser'));
     const [popupActive, changePopupActive] = useState(false);
+    const [api, setApi] = useState(new Api(token));
 
-    // Отображение каталога при авторизации:
+    // Запуск Api - запросов к серверу:
+    useEffect(() => {
+        console.log('User is changed');
+        setApi(new Api(token));
+    }, [token])
+
+    /* Старое отображение каталога при авторизации:
     useEffect(() =>{
         // Запрос каталога с товарами с сервера
         fetch('http://localhost:3001/products', {
@@ -26,6 +34,15 @@ const App = () => {
                 setData(data);
             });
     }, []);
+    */
+
+    // Отображение каталога при авторизации:
+    useEffect(async () => {
+        let data = await api.getProducts();
+        // console.log('Данные с сервера', data);
+        setGoods(data);
+        setData(data);
+    }, [])
 
     return <>
             <div className='wrapper'>
