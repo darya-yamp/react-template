@@ -170,3 +170,49 @@ app.delete('/products/likes/:id', checkAuth, (req, res) => {
 app.listen(PORT, () => {
   console.log(`🚀 Сервер API запущен по адресу: http://localhost:${PORT}`);
 });
+
+// Добавление товара: POST http://localhost:3001/products/add
+app.post('/products/add', checkAuth, (req, res) => {
+  const products = readJSON(PRODUCTS_PATH);
+
+  const newProduct = {
+    _id: `product_${Date.now()}`,
+    ...req.body,
+    likes: []
+  };
+
+  products.push(newProduct);
+  writeJSON(PRODUCTS_PATH, products);
+
+  res.status(201).json(newProduct);
+});
+
+// Обновление товара: PUT http://localhost:3001/products/update/:id
+app.put('/products/update/:id', checkAuth, (req, res) => {
+  const products = readJSON(PRODUCTS_PATH);
+  const product = products.find(p => p._id === req.params.id || p.id === Number(req.params.id));
+
+  if (!product) {
+    return res.status(404).json({ message: 'Товар не найден' });
+  }
+
+  Object.assign(product, req.body);
+
+  writeJSON(PRODUCTS_PATH, products);
+  res.json(product);
+});
+
+// Удаление товара: DELETE http://localhost:3001/products/delete/:id
+app.delete('/products/delete/:id', checkAuth, (req, res) => {
+  const products = readJSON(PRODUCTS_PATH);
+  const product = products.find(p => p._id === req.params.id || p.id === Number(req.params.id));
+
+  if (!product) {
+    return res.status(404).json({ message: 'Товар не найден' });
+  }
+
+  const updatedProducts = products.filter(p => p !== product);
+  writeJSON(PRODUCTS_PATH, updatedProducts);
+
+  res.json({ message: 'Товар удалён' });
+});

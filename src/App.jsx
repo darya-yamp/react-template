@@ -37,11 +37,14 @@ const App = () => {
     */
 
     // Отображение каталога при авторизации:
-    useEffect(async () => {
-        let data = await api.getProducts();
-        // console.log('Данные с сервера', data);
-        setGoods(data);
-        setData(data);
+    useEffect(() => {
+        api.getProducts()
+            .then(response => response.json())
+            .then(data => {
+                setGoods(data);
+                setData(data);
+            });
+        // console.log('Данные с сервера:', data);
     }, [])
 
     return <>
