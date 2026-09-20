@@ -8,8 +8,8 @@ import Api from './api.js';
 /* Аналогичен ReactDOM.render() - здесь описаны данные. */
 
 const App = () => {
-    const [data, setData] = useState([]);
-    const [goods, setGoods] = useState([]);
+    const [data, setData] = useState([]); // Каталог без фильтрации
+    const [goods, setGoods] = useState([]); // Каталог с фильтрацией
     const [token, setToken] = useState(localStorage.getItem('shopUser'));
     const [popupActive, changePopupActive] = useState(false);
     const [api, setApi] = useState(new Api(token));
@@ -39,12 +39,17 @@ const App = () => {
     // Отображение каталога при авторизации:
     useEffect(() => {
         api.getProducts()
-            .then(response => response.json())
             .then(data => {
                 setGoods(data);
                 setData(data);
             });
+
         // console.log('Данные с сервера:', data);
+
+        api.showProfile()
+            .then(data => {
+                console.log("Пользователь", data);
+            })
     }, [])
 
     return <>

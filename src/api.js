@@ -83,6 +83,16 @@ class Api {
         .then(response => response.json())
         .then(data => data);
     }
+
+    showProfile() { // Отображение данных о пользователе 
+        return fetch (`${this.path}/users/me`, {
+            headers: {
+                "Authorization": `Bearer ${this.token}`
+            }
+        })
+        .then(response => response.json())
+        .then(data => data);
+    }
 }
 
 export default Api;
