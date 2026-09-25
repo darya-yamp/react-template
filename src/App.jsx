@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Product from './pages/Product.jsx';
 import Catalog from './pages/Catalog';
 import Header from './components/Header/header-index';
 import Footer from './components/Footer/footer-index';
@@ -38,27 +39,30 @@ const App = () => {
 
     // Отображение каталога при авторизации:
     useEffect(() => {
-        api.getProducts()
-            .then(data => {
-                setGoods(data);
-                setData(data);
-            });
+        if (token) {
+            api.getProducts()
+                .then(data => {
+                    setGoods(data);
+                    setData(data);
+                });
 
-        // console.log('Данные с сервера:', data);
+            // console.log('Данные с сервера:', data);
 
-        api.showProfile()
-            .then(data => {
-                console.log("Пользователь", data);
+            api.showProfile()
+                .then(data => {
+                    console.log("Пользователь", data);
             })
-    }, [])
+        }
+    }, [token])
 
     return <>
             <div className='wrapper'>
-                    <Header products={data} update={setGoods} openPopup={changePopupActive}/>
+                    <Header products={data} update={setGoods} openPopup={changePopupActive} user={!!token} setToken={setToken}/>
                     <Catalog goods={goods}/>
+                    {/* <Product/> */}
                     <Footer/>
             </div>
-            <Modal isActive={popupActive} changeActive={changePopupActive}/>
+            {!token && <Modal isActive={popupActive} changeActive={changePopupActive} setToken={setToken}/>}
     </>
 }
 

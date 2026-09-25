@@ -9,7 +9,7 @@ export default () => {
         const alertStyle = {
             border: 'none'
         }
-		return <Container>
+		return <Container className='container'>
 			<Row>
                 <Col xs={12}>
                     <h1>{product.name}</h1>

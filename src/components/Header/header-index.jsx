@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import './header-style.css';
 import Logo from '../Logo/logo-index';
+import {BoxArrowInLeft, BoxArrowInRight} from 'react-bootstrap-icons';
 import {ReactComponent as FavIcon} from '../Header/images/heart-solid-full.svg';
 import {ReactComponent as UserIcon} from '../Header/images/user-solid-full.svg';
 import {ReactComponent as CartIcon} from '../Header/images/bag-shopping-solid-full.svg';
 
 // Компонент.
-export default ({products, update, openPopup}) => {
+export default ({products, update, openPopup, user, setToken}) => {
 		const [text, changeText] = useState(''); // Первоначальное значение состояния.
         const [count, setCount] = useState(0); // Хук для обновления счетчика кол-ва найденных товаров.
         // Обработчик события - состояние. Обязательно имеют атрибут value и onChange. Строятся на каждый тег input/textArea/select/checkbox. 
@@ -22,6 +23,13 @@ export default ({products, update, openPopup}) => {
                 update(result);
             }
         }
+
+        const logout = e => {
+            e.preventDefault();
+            localStorage.removeItem('shopUser');
+            setToken(false);
+        }
+
         // Аналогичен class Card - сюда передаются данные, здесь происходит создание элементов на странице.
 		return  <>
             <header>
@@ -29,9 +37,11 @@ export default ({products, update, openPopup}) => {
                 <input type='search' name='search' value={text} onChange={handler}/>
                 {/* value связывает значение переменной text с вводом пользователя. */}
                 <nav className='navigation'>
-                    <a href='' className='header-buttons' onClick={e => {e.preventDefault(); openPopup(true)}}>Личный кабинет</a>
-                    <a href='' className='header-buttons'>Избранное</a>
-                    <a href='' className='header-buttons'>Корзина</a>
+                    {user && <a href='' className='header-buttons'>Избранное</a>}
+                    {user && <a href='' className='header-buttons'>Личный кабинет</a>}
+                    {user && <a href='' className='header-buttons' onClick={logout}>Выход</a>}
+                    {!user && <a href='' onClick={e => {e.preventDefault(); openPopup(true)}}>Войти</a>}
+                    {user && <a href='' className='header-buttons'>Корзина</a>}
                 </nav>
             </header>
             <div className='navigation-text'>
