@@ -19,6 +19,9 @@ export default ({isActive, changeActive, api, setToken}) => {
                 // location.reload();
                 localStorage.setItem('shop-user', data.token);
                 setToken(data.token);
+                setEmail('');
+                setPassword('');
+                changeActive(false);
             })
     }
 
