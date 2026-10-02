@@ -53,7 +53,7 @@ const App = () => {
                     console.log("Пользователь", data);
             })
         }
-    }, [token])
+    }, [api])
 
     return <>
             <div className='wrapper'>
@@ -62,7 +62,7 @@ const App = () => {
                     {/* <Product/> */}
                     <Footer/>
             </div>
-            {!token && <Modal isActive={popupActive} changeActive={changePopupActive} setToken={setToken}/>}
+            {!token && <Modal isActive={popupActive} changeActive={changePopupActive} setToken={setToken} api={api} setApi={setApi}/>}
     </>
 }
 
