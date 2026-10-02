@@ -27,7 +27,7 @@ export default ({products, update, openPopup, user, setToken}) => {
         const logout = e => {
             e.preventDefault();
             localStorage.removeItem('shopUser');
-            setToken(false);
+            setToken('');
         }
 
         // Аналогичен class Card - сюда передаются данные, здесь происходит создание элементов на странице.

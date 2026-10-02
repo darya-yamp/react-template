@@ -52,6 +52,9 @@ const App = () => {
                 .then(data => {
                     console.log("Пользователь", data);
             })
+        } else {
+            setGoods([]);
+            setData([]);
         }
     }, [api])
 

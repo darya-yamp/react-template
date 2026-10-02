@@ -7,11 +7,13 @@ import Card from '../components/Card/cards-index';
 export default ({goods}) => {
     return <div className='cards-container'>
             {/* <Card/> */}
-            {goods.map((e, i) => <Card
+            {goods.length > 0 ?
+             goods.map((e, i) => <Card
                 key={i} 
                 image = {e.picture} 
                 text = {e.name}
                 price = {e.price}
-            />)}
+            />) : <p style={{'margin-left': '20px'}}>Войдите в систему для отображения каталога</p>
+        }
         </div>
 }
