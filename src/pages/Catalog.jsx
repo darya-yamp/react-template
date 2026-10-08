@@ -13,7 +13,7 @@ export default ({goods}) => {
                 image = {e.picture} 
                 text = {e.name}
                 price = {e.price}
-            />) : <p style={{'margin-left': '20px'}}>Войдите в систему для отображения каталога</p>
+            />) : <p>Войдите в систему для отображения каталога.</p>
         }
         </div>
 }

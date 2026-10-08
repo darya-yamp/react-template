@@ -45,7 +45,7 @@ export default ({products, update, openPopup, user, setToken}) => {
                 </nav>
             </header>
             <div className='navigation-text'>
-                {text ? `По запросу ${text} найдено ${count} товаров` : 'Каталог товаров'}
+                {/* {text ? `По запросу ${text} найдено ${count} товаров` : 'Каталог товаров'} */}
             </div>
         </>
 }

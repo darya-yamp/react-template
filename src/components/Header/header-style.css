@@ -52,7 +52,7 @@ input {
 }
 
 .navigation-text {
-    margin-left: 20px;
+    /* margin-left: 20px; */
     margin-top: 40px;
     font-size: 24px;
     font-weight: 500;

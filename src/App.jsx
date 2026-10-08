@@ -5,6 +5,7 @@ import Header from './components/Header/header-index';
 import Footer from './components/Footer/footer-index';
 import Modal from './components/Modals/modals-index';
 import Api from './api.js';
+import Home from './pages/Home';
 
 /* Аналогичен ReactDOM.render() - здесь описаны данные. */
 
@@ -61,7 +62,8 @@ const App = () => {
     return <>
             <div className='wrapper'>
                     <Header products={data} update={setGoods} openPopup={changePopupActive} user={!!token} setToken={setToken}/>
-                    <Catalog goods={goods}/>
+                    <Home/>
+                    {/* <Catalog goods={goods}/> */}
                     {/* <Product/> */}
                     <Footer/>
             </div>

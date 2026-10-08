@@ -1,15 +1,16 @@
 .card {
     background-color: #FFFFFF;
     border: none;
-    padding: 25px 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     display: flex;
     flex-direction: column; /* Направление сверху вниз */
     gap: 10px;
 }
 
 .card__item-image {
-    height: 250px;
-    width: 350px;
+    height: 270px;
+    width: 380px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

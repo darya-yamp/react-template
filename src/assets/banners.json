@@ -1,0 +1,57 @@
+[
+  {
+    "id": "first-order",
+    "size": "large",
+    "title": "Подарок за первый заказ",
+    "subtitle": "Салфетки для шерсти и лап SAVVE MINI",
+    "productId": 6,
+    "bg": "#DDE5D5",
+    "imageBg": "#C8D3BE",
+    "textColor": "#3F4A38",
+    "link": "/catalog"
+  },
+  {
+    "id": "hygiene",
+    "size": "small",
+    "title": "Гигиена\nглаз, ушей и зубов",
+    "subtitle": "Салфетки SAVVE · от 347 ₽",
+    "productId": 2,
+    "bg": "#DCE4EC",
+    "imageBg": "#C6D2DE",
+    "textColor": "#3A4652",
+    "link": "/catalog"
+  },
+  {
+    "id": "walk-bags",
+    "size": "small",
+    "title": "Био-пакеты\nдля прогулок",
+    "subtitle": "Компостируемые · 60 и 135 шт.",
+    "productId": 1,
+    "bg": "#EFE6D8",
+    "imageBg": "#E0D3BF",
+    "textColor": "#5A4E3C",
+    "link": "/catalog"
+  },
+  {
+    "id": "shampoo",
+    "size": "small",
+    "title": "Шампунь\nдля всех типов шерсти",
+    "subtitle": "Гипоаллергенный · 300 мл",
+    "productId": 4,
+    "bg": "#F0DCD4",
+    "imageBg": "#E4C7BB",
+    "textColor": "#5C3F35",
+    "link": "/catalog"
+  },
+  {
+    "id": "toys",
+    "size": "small",
+    "title": "Игрушки\nZee.Dog",
+    "subtitle": "Монстр ROY — новинка",
+    "productId": 7,
+    "bg": "#E4E1EE",
+    "imageBg": "#CFCAE0",
+    "textColor": "#45405A",
+    "link": "/catalog"
+  }
+]
