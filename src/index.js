@@ -1,10 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
+import {BrowserRouter} from "react-router-dom";
 import ReactDOM from 'react-dom';
 import App from './App';
 import './style.css';
 
 ReactDOM.render(
-    <App/>,
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>,
     document.querySelector('#root')
 );

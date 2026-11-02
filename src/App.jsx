@@ -1,11 +1,17 @@
 import React, {useState, useEffect} from 'react';
+
+import {Routes, Route} from 'react-router-dom';
+
+import Home from './pages/Home';
 import Product from './pages/Product.jsx';
 import Catalog from './pages/Catalog';
+import Profile from './pages/Profile.jsx';
+
 import Header from './components/Header/header-index';
 import Footer from './components/Footer/footer-index';
 import Modal from './components/Modals/modals-index';
+
 import Api from './api.js';
-import Home from './pages/Home';
 
 /* Аналогичен ReactDOM.render() - здесь описаны данные. */
 
@@ -62,9 +68,15 @@ const App = () => {
     return <>
             <div className='wrapper'>
                     <Header products={data} update={setGoods} openPopup={changePopupActive} user={!!token} setToken={setToken}/>
-                    <Home/>
+                    {/* <Home/> */}
                     {/* <Catalog goods={goods}/> */}
                     {/* <Product/> */}
+                    <Routes>
+		                <Route path="/" element={<Home />} /> {/* / - это главная страница */}
+		                <Route path="/catalog" element={<Catalog goods={goods}/>} />
+		                <Route path="/product" element={<Product/>} />
+                        <Route path="/profile" element={<Profile user={{}}/>} />
+                    </Routes>
                     <Footer/>
             </div>
             {!token && <Modal isActive={popupActive} changeActive={changePopupActive} setToken={setToken} api={api} setApi={setApi}/>}

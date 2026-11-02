@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import './header-style.css';
 import Logo from '../Logo/logo-index';
 import {BoxArrowInLeft, BoxArrowInRight} from 'react-bootstrap-icons';
@@ -38,10 +39,10 @@ export default ({products, update, openPopup, user, setToken}) => {
                 {/* value связывает значение переменной text с вводом пользователя. */}
                 <nav className='navigation'>
                     {user && <a href='' className='header-buttons'>Избранное</a>}
-                    {user && <a href='' className='header-buttons'>Личный кабинет</a>}
+                    {user && <Link to='/profile' className='header-buttons'>Личный кабинет</Link>}
                     {user && <a href='' className='header-buttons' onClick={logout}>Выход</a>}
                     {!user && <a href='' onClick={e => {e.preventDefault(); openPopup(true)}}>Войти</a>}
-                    {user && <a href='' className='header-buttons'>Корзина</a>}
+                    {user && <Link to='/catalog' className='header-buttons'>Корзина</Link>}
                 </nav>
             </header>
             <div className='navigation-text'>
