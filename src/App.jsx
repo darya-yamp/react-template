@@ -12,6 +12,7 @@ import Footer from './components/Footer/footer-index';
 import Modal from './components/Modals/modals-index';
 
 import Api from './api.js';
+import Local from './Local.js';
 
 /* Аналогичен ReactDOM.render() - здесь описаны данные. */
 
@@ -19,6 +20,7 @@ const App = () => {
     const [data, setData] = useState([]); // Каталог без фильтрации
     const [goods, setGoods] = useState([]); // Каталог с фильтрацией
     const [token, setToken] = useState(localStorage.getItem('shopUser'));
+    const [user, setUser] = useState(Local.getItem('user'));
     const [popupActive, changePopupActive] = useState(false);
     const [api, setApi] = useState(new Api(token));
 
@@ -67,19 +69,35 @@ const App = () => {
 
     return <>
             <div className='wrapper'>
-                    <Header products={data} update={setGoods} openPopup={changePopupActive} user={!!token} setToken={setToken}/>
+                    <Header 
+                        products={data} 
+                        update={setGoods} 
+                        openPopup={changePopupActive} 
+                        user={!!token} 
+                        setToken={setToken}
+                        setUser={setUser}
+                    />
+
                     {/* <Home/> */}
                     {/* <Catalog goods={goods}/> */}
                     {/* <Product/> */}
+
                     <Routes>
 		                <Route path="/" element={<Home />} /> {/* / - это главная страница */}
 		                <Route path="/catalog" element={<Catalog goods={goods}/>} />
 		                <Route path="/product" element={<Product/>} />
-                        <Route path="/profile" element={<Profile user={{}}/>} />
+                        <Route path="/profile" element={<Profile user={user}/>} />
                     </Routes>
                     <Footer/>
             </div>
-            {!token && <Modal isActive={popupActive} changeActive={changePopupActive} setToken={setToken} api={api} setApi={setApi}/>}
+            {!token && <Modal 
+                isActive={popupActive} 
+                changeActive={changePopupActive} 
+                setToken={setToken} 
+                api={api} 
+                setApi={setApi} 
+                setUser={setUser}
+            />}
     </>
 }
 
