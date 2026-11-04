@@ -6,9 +6,10 @@ import {BoxArrowInLeft, BoxArrowInRight} from 'react-bootstrap-icons';
 import {ReactComponent as FavIcon} from '../Header/images/heart-solid-full.svg';
 import {ReactComponent as UserIcon} from '../Header/images/user-solid-full.svg';
 import {ReactComponent as CartIcon} from '../Header/images/bag-shopping-solid-full.svg';
+import Local from '../../Local';
 
 // Компонент.
-export default ({products, update, openPopup, user, setToken}) => {
+export default ({products, update, openPopup, user, setToken, setUser}) => {
 		const [text, changeText] = useState(''); // Первоначальное значение состояния.
         const [count, setCount] = useState(0); // Хук для обновления счетчика кол-ва найденных товаров.
         // Обработчик события - состояние. Обязательно имеют атрибут value и onChange. Строятся на каждый тег input/textArea/select/checkbox. 
@@ -28,7 +29,9 @@ export default ({products, update, openPopup, user, setToken}) => {
         const logout = e => {
             e.preventDefault();
             localStorage.removeItem('shopUser');
+            localStorage.removeItem('user');
             setToken('');
+            setUser({});
         }
 
         // Аналогичен class Card - сюда передаются данные, здесь происходит создание элементов на странице.

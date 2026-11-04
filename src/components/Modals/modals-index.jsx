@@ -3,8 +3,9 @@ import {FloatingLabel, Form} from 'react-bootstrap';
 import {X, XCircleFill, EyeSlash} from 'react-bootstrap-icons';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './modals-style.css';
+import Local from '../../Local';
 
-export default ({isActive, changeActive, api, setToken}) => {
+export default ({isActive, changeActive, api, setToken, setUser}) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -14,10 +15,12 @@ export default ({isActive, changeActive, api, setToken}) => {
         e.preventDefault();
         api.signin({"email": email, "password": password})
             .then(data => {
-                // console.log(data);
+                console.log(data);
                 // localStorage.setItem('shop-user', data.token);
                 // location.reload();
-                localStorage.setItem('shopUser', data.token);
+                Local.setItem('shopUser', data.token);
+                Local.setItem('user', data.data, true);
+                setUser(data.data);
                 setToken(data.token);
                 setEmail('');
                 setPassword('');

@@ -20,7 +20,7 @@ const App = () => {
     const [data, setData] = useState([]); // Каталог без фильтрации
     const [goods, setGoods] = useState([]); // Каталог с фильтрацией
     const [token, setToken] = useState(localStorage.getItem('shopUser'));
-    const [user, setUser] = useState(Local.getItem('user'));
+    const [user, setUser] = useState(Local.getItem('user', true));
     const [popupActive, changePopupActive] = useState(false);
     const [api, setApi] = useState(new Api(token));
 

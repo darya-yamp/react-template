@@ -11,9 +11,7 @@ export default ({user}) => {
                 <p>{user.about}</p>
             </Col>
             <Col md={6}>
-                <Figure>
-                    <Figure.Image src={user.avatar}/>
-                </Figure>
+                <p>{user.avatar}</p>
             </Col>
         </Row>}
     </Container>
